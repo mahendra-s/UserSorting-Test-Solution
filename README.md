@@ -14,6 +14,25 @@ sbt clean run
 Output after running application will be written in project home directory. Already executed output can be seen in
 [Sample Output File](outfile.txt)
 
-### outout of restful can be downloaded by hitting url 
+### Output of restful can be downloaded by hitting url 
 [http://localhost:8080/api/1.0/outfile.txt](http://localhost:8080/api/1.0/outfile.txt)
+
+
+Note: Application can be configured via [application.conf](src/main/resources/application.conf).
+Configurations:  
+```
+output.separator {
+  column = ", "
+  line = "\n"
+}
+
+geo.point {
+  latitude = 17.387140
+  longitude = 78.491684
+}
+
+input.url = "https://jsonplaceholder.typicode.com/users"
+
+outfile.name = "outfile.txt"
+```
 
