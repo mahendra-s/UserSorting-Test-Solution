@@ -24,7 +24,6 @@ object QuickstartServer extends App with Routes with Logging {
   serverBinding.onComplete {
     case Success(bound) =>
       info(s"Server online at http://${bound.localAddress.getHostString}:${bound.localAddress.getPort}/")
-      info(s"Press Enter to stop server.")
     case Failure(e) =>
       error(s"Server could not start!", e)
       system.terminate()
