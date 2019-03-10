@@ -35,10 +35,10 @@ object UserService extends Logging {
   }
 
   def outFormat(users: List[User]): List[List[String]] = {
-    val header = List("id", "name", "email", "company name", "latitude", "longitude")
+    val header = List("name", "email", "company name", "latitude", "longitude")
     header ::
       users.map { user =>
-        List(user.id, user.name, user.email, user.company.name, user.address.geo.lat, user.address.geo.lng).map(_.toString)
+        List(user.name, user.email, user.company.name, user.address.geo.lat, user.address.geo.lng).map(_.toString)
       }
   }
 }

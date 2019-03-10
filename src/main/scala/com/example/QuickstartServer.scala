@@ -13,7 +13,7 @@ import scala.util.{Failure, Success}
 object QuickstartServer extends App with Routes with Logging {
 
   //#server-bootstrapping
-  implicit val system: ActorSystem = ActorSystem("helloAkkaHttpServer")
+  implicit val system: ActorSystem = ActorSystem("UserSorting-Test-Solution")
   implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val executionContext: ExecutionContext = system.dispatcher
   //#server-bootstrapping
